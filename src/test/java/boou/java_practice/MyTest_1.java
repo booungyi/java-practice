@@ -11,7 +11,13 @@ import java.util.Scanner;
 import static org.assertj.core.api.Assertions.*;
 
 public class MyTest_1 { //클래스 안에 있는 함수 (매서드)
+/*
+https://programmers.co.kr/account/sign_in?referer=https%3A%2F%2Fschool.
+programmers.co.kr%2Flearn%2Fcourses%2F30%2Flessons%2F120805%3Flanguage%3Djava
+깨보기
 
+월요일에 지금까지 배웠던거 중에 설명할꺼 준비해오깅ㅇ
+ */
     @Test
     void maxTest() {
         assertThat(Math.max(10, 7)).isEqualTo(10);
