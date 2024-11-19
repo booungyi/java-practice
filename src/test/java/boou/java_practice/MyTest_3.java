@@ -87,7 +87,7 @@ public class MyTest_3 {
 
     //"https://" 와 첫 "/" 사이에 있는 도메인을  return 하는 함수
     String extractDomain(String url1) {
-        int strInt;
+        //int strInt;
         //https://{git-scm.com}/book/en/v2 → git-scm.com
         // "//"부터 /사이에 있는 도메인 을 나눔
         // 방법 url1.indexof 로 //부분을 찾아서 정수로 반환, 반환한 수만큼의 범위를 url1.substring 저장
