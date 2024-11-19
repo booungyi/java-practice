@@ -189,9 +189,11 @@ public class MyTest_1 { //클래스 안에 있는 함수 (매서드)
 
     @Test
     void Testempty() {
+
         String s = "123a";
         assertThat(s.isEmpty()).isFalse(); //false (비어있는지 판별)
         assertThat(s.equals("123a")).isTrue();//true (문자열이 같은지)
+        System.out.println(s.charAt(3));
         assertThat(s.charAt(3)).isEqualTo('a');// a  (charAt(안에 들어간 숫자번째 문자열을 문자 하나(char)로 변환) 123"a")
         assertThat(s.toLowerCase()).isEqualTo("123a");// 222 (소문자로 변환)
         assertThat(s.toUpperCase()).isEqualTo("123A");//  222(대문자로 변환)
@@ -201,6 +203,34 @@ public class MyTest_1 { //클래스 안에 있는 함수 (매서드)
         assertThat(s.endsWith("a")).isTrue();//  true    (끝나는 문자열이 같은지)
         assertThat(s.repeat(2)).isEqualTo("123a123a"); //22222222222222 (문자열 반복횟수)
         assertThat(s.concat("24241")).isEqualTo("123a24241");// 123a24241 ( 문자열 끝에 추가할 문자열 )
+        assertThat(s.replace("a", "r")).isEqualTo("123r"); //replace (타겟 char 문자 하나를 (새로운문자) 로 바꿔줌
+        assertThat(s.trim()).isEqualTo("123a"); // 공백을 지워줌
+
+        String formatted = String.format("안녕하세요. %d년생 %s입니다.", 71, "마동석");
+        assertThat(formatted).isEqualTo("안녕하세요. 71년생 마동석입니다.");
+
+        int i = 23;
+        System.out.println(String.format("%d_", i));    //23_
+        System.out.println(String.format("%5d_", i));   //  23_
+        System.out.println(String.format("%-5d_", i));  //23   _
+        System.out.println(String.format("%05d_", i));  //00023_
+
+        출처: https://blog.jiniworld.me/68 [hello jiniworld:티스토리]
+        //%5d 와 같이 %와d 사이에 정수를 설정하면
+        // 글자 길이를 설정할 수있다 기본적으로 오른쪽 정렬이고
+        // - 를붙일경우 왼쪽정렬
+        //표현할 숫자인 i의 길이가 5보다 작을경우 0을 붙입니다.
+
+        //%d =integer 10진수 정수
+        //%f 부동소수 십진수
+        //%c == char 자료형
+        //%s 문자열
+
+        i = 123456789;
+        String str = "3313131";
+        System.out.println(String.format("%,d", i));
+        System.out.println(String.join(",", s,s,str,"ㅑ"));
+        //join = "((사이에 들어갈 문자열)", 문자열1,문자열2,문자열3(또는 String or char형 변수)
     }
 }
 
