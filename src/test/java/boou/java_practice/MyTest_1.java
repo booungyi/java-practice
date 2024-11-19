@@ -194,7 +194,7 @@ public class MyTest_1 { //클래스 안에 있는 함수 (매서드)
         assertThat(s.isEmpty()).isFalse(); //false (비어있는지 판별)
         assertThat(s.equals("123a")).isTrue();//true (문자열이 같은지)
         System.out.println(s.charAt(3));
-        assertThat(s.charAt(3)).isEqualTo('a');// a  (charAt(안에 들어간 숫자번째 문자열을 문자 하나(char)로 변환) 123"a")
+        assertThat(s.charAt(3)).isEqualTo('a');// a  (charAt(안에 들어간 숫자번째 문자열을 문자 하나(char)로 변환) 123"a"::0부터시작)
         assertThat(s.toLowerCase()).isEqualTo("123a");// 222 (소문자로 변환)
         assertThat(s.toUpperCase()).isEqualTo("123A");//  222(대문자로 변환)
         assertThat(s.contains("22")).isFalse();// false (같은 문자열이 들어가있는지)
