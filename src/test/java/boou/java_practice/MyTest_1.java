@@ -205,7 +205,6 @@ public class MyTest_1 { //클래스 안에 있는 함수 (매서드)
         assertThat(s.concat("24241")).isEqualTo("123a24241");// 123a24241 ( 문자열 끝에 추가할 문자열 )
         assertThat(s.replace("a", "r")).isEqualTo("123r"); //replace (타겟 char 문자 하나를 (새로운문자) 로 바꿔줌
         assertThat(s.trim()).isEqualTo("123a"); // 공백을 지워줌
-
         String formatted = String.format("안녕하세요. %d년생 %s입니다.", 71, "마동석");
         assertThat(formatted).isEqualTo("안녕하세요. 71년생 마동석입니다.");
 
