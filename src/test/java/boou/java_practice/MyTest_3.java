@@ -21,9 +21,9 @@ public class MyTest_3 {
         assertThat(isValidIdNumber("1234567")).isTrue();
         assertThat(isValidIdNumber("1abcd67")).isFalse();
         //문자를 대문자로
-        assertThat(toCamelCase("snake_case")).isEqualTo("snakeCase");
-        assertThat(toCamelCase("product_name")).isEqualTo("productName");
-        assertThat(toCamelCase("created_at")).isEqualTo("createdAt");
+        assertThat(toCameCase("snake_case")).isEqualTo("snakeCase");
+        assertThat(toCameCase("product_name")).isEqualTo("productName");
+        assertThat(toCameCase("created_at")).isEqualTo("createdAt");
         //유효한 휴대폰 번호인지 판별
         assertThat(isValidPhoneNumber("01012345678")).isTrue();
         assertThat(isValidPhoneNumber("010123456789")).isFalse();
@@ -42,12 +42,12 @@ public class MyTest_3 {
 
     //유효한 이메일인지 판별
     Boolean isValidEmail(String s1) {
-
         return s1.contains("@");
     }
 
     //주민등록번호로 성별 판별
     Boolean isFemale(String s1) {
+
         return s1.startsWith("2") || s1.startsWith("4");
     }
 
@@ -63,19 +63,14 @@ public class MyTest_3 {
     }
 
     //문자를 대문자로 바꾸기
-    String toCamelCase(String s1) {
+    String toCameCase(String s1) {
         //Character.toUpperCase() 를쓰면 안에있는 문자를 대문자로 변경
+
         String str1, str2;
         str1 = s1.substring(0, s1.indexOf('_')); //"snake"
         str2 = s1.substring(s1.indexOf('_') + 1); //"case"
-        return str1
-                + Character.toUpperCase(str2.charAt(0))
-                + str2.substring(1);
+        return str1 + Character.toUpperCase(str2.charAt(0)) + str2.substring(str2.indexOf(0) + 2);
         //str1 = "snake Case" 왼쪽("snake") + "C" + str2.indexof(0)+2 = (ase)
-        //return s1.substring(0,s1.indexOf('_')) //snake
-//                + Character.toUpperCase(s1.charAt(s1.indexOf(('_')+1))) //C
-//                + s1.substring(s1.indexOf('_')+2); //ase
-        //snake_case  [s1.substrin(0,/왼쪽/(snake)=s1.indexof("_')) , case(오른쪽) = s1,indexof(("-")+1)]
     }
 
     //유효한 휴대폰 번호인지 판별
@@ -98,12 +93,9 @@ public class MyTest_3 {
         //String str1 = url1.substring(url1.indexOf("//") + 2); // git-scm.com/book/en/v2
         //String str2 = str1.substring(2); // git-scm.com/book/en/v2
         //strInt = str1.indexOf("/");
-        //return url1.substring(url1.indexOf("//") + 2 ,url1.indexOf(url1.indexOf("//") +2,url1.indexOf("/")));
-
-        String protocol = "https://";
-        int protocolLength = protocol.length();
-        int indexOfSlash = url1.indexOf("/", protocolLength);
-        return url1.substring(protocolLength, indexOfSlash);
+        //return str1.substring(0, str1.indexOf("/"));
+        //최최최종
+        return url1.substring(url1.indexOf("//") + 2, url1.indexOf("/",url1.indexOf("//")+2));
     }
 
     //비밀번호 강도 확인
@@ -117,12 +109,12 @@ public class MyTest_3 {
         Boolean pass3 = false;
         Boolean pass4 = false;
 
-        String sChars = "!@#$%^&*";
+        String specialChars = "!@#$%^&*";
         //8자리 인지 아닌지
 
         for (int i = 0; i < str.length(); i++) {
             //특수문자를 한개라도 포합하는지
-            if (sChars.contains(String.valueOf(str.charAt(i)))) {
+            if (str.contains(String.valueOf(specialChars.charAt(i)))) {
                 pass1 = true;
             }
             //소문자를 포함하는지
