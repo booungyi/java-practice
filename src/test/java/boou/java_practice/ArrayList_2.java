@@ -18,8 +18,7 @@ public class ArrayList_2 {
         광역시목록.set(3, "전라도 광주");
         광역시목록.remove("일산");
 
-        ArrayList<String> 광역시목록2 = new ArrayList<>();
-        광역시목록2 = 광역시목록;
+        ArrayList<String> 광역시목록2 = new ArrayList<>(광역시목록) ;
         광역시목록2.set(0, 광역시목록2.get(0)+"광역시");
         광역시목록2.set(1, 광역시목록2.get(1)+"광역시");
         광역시목록2.set(2, 광역시목록2.get(2)+"광역시");
