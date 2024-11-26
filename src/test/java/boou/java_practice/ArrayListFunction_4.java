@@ -116,10 +116,10 @@ public class ArrayListFunction_4 {
         ArrayList<Integer> higher = new ArrayList<>();// 반환할 인티저형 List
 
         //조건 = number 가 들어왔을때 넘버랑 n 번째 숫자와 비교해서 high 가 몇인지
-        for (Integer 기준점수 : numbers) {
+        for (Integer standardGrade : numbers) {
             int high = 0;//몇 등인지 (정확히는 내위로 몇명있는지) 확인할 정수형 변수
-            for (Integer 비교점수 : numbers) {
-                if (기준점수 < 비교점수) {
+            for (Integer comp : numbers) {
+                if (standardGrade < comp) {
                     high++;
                 }
             }
@@ -169,15 +169,14 @@ public class ArrayListFunction_4 {
     // 각 가격의 상품이 리스트에 몇개 존재하는지 계산합니다.
     // 상품 가격과 그 개수를 매핑한 새로운 리스트를 반환합니다.
     // 결과 리스트는 [가격,개수] 형태여야 합니다.
-//    HashMap<Integer, Integer> countDuplicateItems(List<Integer> numbers) {
-//        HashMap<Integer, Integer> price = new HashMap<>();
-//
-//
-//        for (Integer number : numbers) {
-//            price.put(number, price.getOrDefault(number, 0) + 1);
-//        }
-//        return price;
-//    }
+    HashMap<Integer, Integer> countDuplicateItems(List<Integer> numbers) {
+        HashMap<Integer, Integer> price = new HashMap<>();
 
+
+        for (Integer number : numbers) {
+            price.put(number, price.getOrDefault(number, 0) + 1);
+        }
+        return price;
+    }
 }
 
