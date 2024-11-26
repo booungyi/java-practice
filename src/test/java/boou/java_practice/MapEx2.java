@@ -17,9 +17,12 @@ public class MapEx2 {
         //namelist 에 nameList 안의 String 값을 넣기
 
         for (String name : nameList) {
-//            namelist.put(name,List.of());
+            namelist.put(name, 2);
+            if (namelist.get(name).equals(namelist.)) {
+                namelist.put(name, namelist.get(name) + 1);
+            }
         }
-        System.out.println(nameList.get(3));
+
 
 //       while (!stop){
 //           int i = 0;
@@ -28,9 +31,6 @@ public class MapEx2 {
 //           if (nameList.size()>) {
 //           }
 //        }
-
     }
-
-
 }
 
