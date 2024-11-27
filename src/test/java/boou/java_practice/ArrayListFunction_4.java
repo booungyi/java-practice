@@ -161,22 +161,5 @@ public class ArrayListFunction_4 {
         }
         return sum;
     }
-
-    //중북 상품 개수 계산
-    //HashMap 도 함께 사용해야 함
-    //integer 타입의 상품 가격 리스트가 주어짐(input)
-    // 다음 조건에 맞는 함수 를 작성해주세용
-    // 각 가격의 상품이 리스트에 몇개 존재하는지 계산합니다.
-    // 상품 가격과 그 개수를 매핑한 새로운 리스트를 반환합니다.
-    // 결과 리스트는 [가격,개수] 형태여야 합니다.
-    HashMap<Integer, Integer> countDuplicateItems(List<Integer> numbers) {
-        HashMap<Integer, Integer> price = new HashMap<>();
-
-
-        for (Integer number : numbers) {
-            price.put(number, price.getOrDefault(number, 0) + 1);
-        }
-        return price;
-    }
 }
 
