@@ -3,18 +3,19 @@ package boou.java_practice;
 import ch.qos.logback.core.net.ssl.SSL;
 import org.junit.jupiter.api.Test;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
+
 
 public class MapEx_4 {
     @Test
     void test() {
-        assertThat(countDuplicateItems(List.of(1000, 2000, 1000, 3000, 2000)))
-                .isEqualTo(List.of(List.of(1000, 2), List.of(2000, 2), List.of(3000, 1)));
-        assertThat(countDuplicateItems(List.of(5000))).isEqualTo(List.of(List.of(5000, 1)));
+        assertThat(countDuplicateItems(List.of(1000, 2000, 1000, 3000, 2000))).containsExactlyInAnyOrder(List.of(1000, 2), List.of(2000, 2), List.of(3000, 1));
+        assertThat(countDuplicateItems(List.of(5000))).containsExactlyInAnyOrder(List.of(5000, 1));
         assertThat(countDuplicateItems(List.of())).isEqualTo(List.of());
 
         // TODO: 두 리스트에 모두 존재하는 수 찾기(교집합 찾기)
@@ -94,12 +95,19 @@ public class MapEx_4 {
     // 각 가격의 상품이 리스트에 몇개 존재하는지 계산합니다.
     // 상품 가격과 그 개수를 매핑한 새로운 리스트를 반환합니다.
     // 결과 리스트는 [가격,개수] 형태여야 합니다.
-        ArrayList<ArrayList<Integer>> countDuplicateItems(List<Integer> numbers) {
-            ArrayList<ArrayList<Integer>> price = new ArrayList<>(Arrays.asList());
+        List<List<Integer>> countDuplicateItems(List<Integer> numbers) {
+            HashMap<Integer, Integer> priceMap = new HashMap<>();
 
         for (Integer number : numbers) {
-            price.put(number, price.getOrDefault(number, 0) + 1);
+            priceMap.put(number,priceMap.getOrDefault(number, 0) +1);
         }
+            List<List<Integer>> price = new ArrayList<>();
+            for (Map.Entry<Integer,Integer> entry : priceMap.entrySet()) {
+                price.add(new ArrayList<>(Arrays.asList(
+                        entry.getKey(),
+                        entry.getValue()
+                )));
+            }
         return price;
     }
 }
