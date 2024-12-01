@@ -42,8 +42,6 @@ public class Map_city {
             System.out.println(도시들.get("특산물"));
             System.out.println(도시들.get("시장"));
 
-
-
         }
     }
 }
