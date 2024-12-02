@@ -1,9 +1,7 @@
-package boou.java_practice;
+package boou.java_practice.MapEx;
 
-import ch.qos.logback.core.net.ssl.SSL;
 import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
 import java.util.*;
 import java.util.HashMap;
 import java.util.Map;

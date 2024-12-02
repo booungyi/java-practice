@@ -16,11 +16,12 @@ public class ProgramersPhonenumber {
             System.out.printf("숫자를 입력해주세요 (\"끝\"입력시 종료) : ");
             scrapbook = scanner.nextLine();
             Phone_book.add(scrapbook);
+            if (scrapbook.isEmpty()) {
+                System.out.println("다시 입력해주세요: ");
+            }
         }
         System.out.println(Phonenum(Phone_book));
     }
-
-
     public static Boolean Phonenum(List<String> phonnum) {
         boolean answer = true;
         for (String number : phonnum) {

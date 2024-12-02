@@ -1,10 +1,7 @@
-package boou.java_practice;
+package boou.java_practice.Collections;
 
 import org.junit.jupiter.api.Test;
 
-import java.awt.*;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 import static org.assertj.core.api.Assertions.*;

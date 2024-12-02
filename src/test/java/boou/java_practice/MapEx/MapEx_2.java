@@ -1,4 +1,4 @@
-package boou.java_practice;
+package boou.java_practice.MapEx;
 
 import java.util.HashMap;
 import java.util.Map;

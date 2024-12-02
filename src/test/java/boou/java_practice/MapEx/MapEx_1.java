@@ -1,4 +1,4 @@
-package boou.java_practice;
+package boou.java_practice.MapEx;
 
 import org.junit.jupiter.api.Test;
 
@@ -6,8 +6,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.*;
 
