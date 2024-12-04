@@ -1,4 +1,4 @@
-package boou.java_practice;
+package boou.java_practice.Class;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

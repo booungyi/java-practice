@@ -1,4 +1,4 @@
-package boou.java_practice;
+package boou.java_practice.MyTest;
 
 import org.junit.jupiter.api.Test;
 

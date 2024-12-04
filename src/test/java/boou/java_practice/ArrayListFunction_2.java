@@ -27,4 +27,5 @@ public class ArrayListFunction_2 {
 
         return (double) sum / numbers.size();
     }
+
 }
