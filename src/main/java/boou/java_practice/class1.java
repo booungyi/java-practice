@@ -8,12 +8,13 @@ import java.util.Map;
 public class class1 {
     public static void main(String[] args) {
         Map<String, String> books = new HashMap<>();
-        Book book = new Book();
+        Book book = new Book(12000, 12345, "ring", LocalDate.of(2021, 2, 1));
+        book.printTitle();
         book.title = "ring";
         book.price = 12000;
         book.publishedAt = LocalDate.of(2021, 02, 21);
         book.isbn = 123456;
-        book.printTitle(book.price);
+        book.printTitle();
 
         Author author = new Author();
         author.name = "이름";
@@ -31,6 +32,7 @@ public class class1 {
 
         Category category = new Category();
         category.name = "bread";
+
     }
 
 }

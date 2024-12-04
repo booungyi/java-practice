@@ -8,8 +8,15 @@ public class Book {
     int price;
     int isbn;
 
-    void printTitle(int price) {
-        System.out.println(title + price);
+    public Book(int price, int isbn, String title, LocalDate publishedAt) {
+        this.price = price;
+        this.isbn = isbn;
+        this.title = title;
+        this.publishedAt = publishedAt;
+    }
+
+    void printTitle() {
+        System.out.println(title+price+publishedAt+isbn);
 
     }
 }
