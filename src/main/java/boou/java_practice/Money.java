@@ -20,6 +20,7 @@ public class Money {
     int plus(int money) {// 이함수를 쓰려면 input 이 money 고 output이 int 여야함
         return value += money;
     }
+
     //    이 함수는 Money 객체를 받아서 해당 객체의 value 값을 더하고, 새로운 Money 객체를 반환합니다.
     Money plus(Money money) {
         return new Money(value + money.value);
@@ -32,7 +33,7 @@ public class Money {
 
     // 이 함수는 Money 객체를 받아서 해당 객체의 value 값을 빼고, 새로운 Money 객체를 반환합니다.
     Money minus(Money money) {
-        return new Money(value-money.value);
+        return new Money(value - money.value);
     }
 
     @Override
